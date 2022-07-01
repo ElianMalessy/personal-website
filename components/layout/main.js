@@ -1,13 +1,9 @@
 import { Box, Container } from "@chakra-ui/react";
 import dynamic from "next/dynamic";
-
 import Navbar from "./navbar";
 import Head from "next/head";
 import Loader from "../globe/loader";
-const GlobeContainer = dynamic(() => import("../globe/globeContainer"), {
-  ssr: false,
-  loading: () => <Loader />,
-});
+import GlobeContainer from "../globe/globeContainer";
 export default function Main({ children }) {
   return (
     <Box as="main">

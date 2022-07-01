@@ -4,12 +4,12 @@ import { OrbitControls, Stars, useTexture } from "@react-three/drei";
 import * as THREE from "three";
 
 import EarthDayMap from "../../public/assets/8k_earth_daymap.jpg";
-import EarthNightMap from "../../public/assets/8k_earth_nightmap.jpg";
 import EarthNormalMap from "../../public/assets/8k_earth_normal_map.jpg";
 import EarthSpecularMap from "../../public/assets/8k_earth_specular_map.jpg";
 import EarthCloudsMap from "../../public/assets/8k_earth_clouds.jpg";
+import EarthNightMap from "../../public/assets/8k_earth_nightmap.jpg";
 
-export default function Globe(props) {
+export default function Globe({ colorMode }) {
   const earthRef = useRef();
   const cloudsRef = useRef();
 
@@ -20,8 +20,9 @@ export default function Globe(props) {
     cloudsRef.current.rotation.y = elapsedTime / 6;
   });
 
-  const [colorMap, normalMap, specularMap, cloudsMap] = useTexture([
+  const [dayMap, nightMap, normalMap, specularMap, cloudsMap] = useTexture([
     EarthDayMap.src,
+    EarthNightMap.src,
     EarthNormalMap.src,
     EarthSpecularMap.src,
     EarthCloudsMap.src,
@@ -30,7 +31,6 @@ export default function Globe(props) {
   return (
     <>
       <>
-        {/* <ambientLight intensity={1} /> */}
         <pointLight color="#f6f3ea" position={[2, 0, 5]} intensity={1.2} />
         <Stars
           radius={300}
@@ -53,20 +53,30 @@ export default function Globe(props) {
         <mesh ref={earthRef} position={[0, 0, 3]}>
           <sphereGeometry args={[1, 32, 32]} />
           <meshPhongMaterial specularMap={specularMap} />
-          <meshStandardMaterial
-            map={colorMap}
-            normalMap={normalMap}
-            metalness={0.4}
-            roughness={0.7}
+          {colorMode == "light" && (
+            <meshStandardMaterial
+              map={dayMap}
+              normalMap={normalMap}
+              metalness={0.4}
+              roughness={0.7}
+            />
+          )}
+          {colorMode == "dark" && (
+            <meshStandardMaterial
+              map={nightMap}
+              normalMap={normalMap}
+              metalness={0.4}
+              roughness={0.7}
+            />
+          )}
+          <OrbitControls
+            enableZoom={true}
+            enablePan={true}
+            enableRotate={true}
+            zoomSpeed={0.6}
+            panSpeed={0.5}
+            rotateSpeed={0.4}
           />
-          {/* <OrbitControls
-          enableZoom={true}
-          enablePan={true}
-          enableRotate={true}
-          zoomSpeed={0.6}
-          panSpeed={0.5}
-          rotateSpeed={0.4}
-        /> */}
         </mesh>
       </>
     </>
