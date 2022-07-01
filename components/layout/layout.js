@@ -20,10 +20,6 @@ const Layout = ({ children, title }) => (
       {title && (
         <Head>
           <title>{title} - Elian Hijmans Malessy</title>
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta name="author" content="Elian Malessy" />
-          <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-          <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         </Head>
       )}
       {children}

@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useContext } from "react";
+import { PathContext } from "../../pages/_app";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
 import {
@@ -44,7 +45,8 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
   );
 };
 
-const Navbar = ({ path }) => {
+const Navbar = () => {
+  const path = useContext(PathContext);
   const router = useRouter();
   const bgColor = useColorModeValue("#f0e7db", "#202023");
   return (
@@ -53,10 +55,9 @@ const Navbar = ({ path }) => {
       as="nav"
       w="100%"
       p="1rem 1rem 1rem 1rem"
-      bg={useColorModeValue("#ffffff40", "#20202380")}
-      css={{ backdropFilter: "blur(10px)" }}
+      bg={useColorModeValue("#ffffff40", "rgba(32, 32, 34, 0.81)")}
       zIndex={1}
-      paddingRight="1.5rem"
+      top="0"
     >
       <Container
         display="flex"
