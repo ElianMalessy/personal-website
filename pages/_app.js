@@ -1,11 +1,12 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import { AnimatePresence } from "framer-motion";
 import { createContext } from "react";
+
 import Main from "../components/layout/main";
 import theme from "../components/theme";
 
 export const PathContext = createContext();
-function MyApp({ Component, pageProps, router }) {
+function App({ Component, pageProps, router }) {
   return (
     <ChakraProvider theme={theme}>
       <PathContext.Provider value={router.asPath}>
@@ -27,4 +28,4 @@ function MyApp({ Component, pageProps, router }) {
   );
 }
 
-export default MyApp;
+export default App;

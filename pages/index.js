@@ -1,7 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import { Container, Flex, Box, useColorModeValue } from "@chakra-ui/react";
+import { Container, Box, useColorModeValue } from "@chakra-ui/react";
+import { useEffect } from "react";
+
 import Section from "../components/section";
 import Page from "../components/layout/page";
 export default function Home() {

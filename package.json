@@ -1,5 +1,6 @@
 {
   "name": "elianmalessy",
+  "license": "MIT",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -15,6 +16,7 @@
     "@emotion/styled": "^11",
     "@react-three/drei": "^9.14.3",
     "@react-three/fiber": "^8.0.27",
+    "cookies-next": "^2.1.1",
     "framer-motion": "^6",
     "next": "12.1.6",
     "react": "18.1.0",
