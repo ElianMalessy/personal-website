@@ -10,6 +10,8 @@ import EarthCloudsMap from "../../public/assets/8k_earth_clouds.jpg";
 import EarthNightMap from "../../public/assets/8k_earth_nightmap.jpg";
 
 export default function Globe({ colorMode }) {
+  //const fetcher = (url) => axios.get(url).then((r) => r.data);
+  //const { data: res } = useSWR('/api', fetcher);
   const earthRef = useRef();
   const cloudsRef = useRef();
 

@@ -9,12 +9,7 @@ export default function Document() {
       <Head />
       <body>
         {/* 👇 Here's the script */}
-        {getCookie("chakra-ui-color-mode") && (
-          <ColorModeScript
-            initialColorMode={getCookie("chakra-ui-color-mode")}
-            type={"cookie"}
-          />
-        )}
+        <ColorModeScript initialColorMode={"dark"} />
         <Main />
         <NextScript />
       </body>

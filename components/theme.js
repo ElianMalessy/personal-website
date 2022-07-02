@@ -10,17 +10,10 @@ const styles = {
   }),
 };
 
-while (true) {
-  if (!hasCookie("chakra-ui-color-mode"))
-    setCookie("chakra-ui-color-mode", "dark");
-  else break;
-}
-
 const config = {
   initialColorMode: getCookie("chakra-ui-color-mode"),
   useSystemColorMode: false,
 };
-fetch(`http://localhost:3000/api?color=${config.initialColorMode}`);
 const theme = extendTheme({ config, styles });
 console.log(getCookie("chakra-ui-color-mode"), theme.config.initialColorMode);
 export default theme;
