@@ -1,9 +1,9 @@
 import { Box, Container } from "@chakra-ui/react";
-import dynamic from "next/dynamic";
-import Navbar from "./navbar";
 import Head from "next/head";
-import Loader from "../globe/loader";
+
+import Navbar from "./navbar";
 import GlobeContainer from "../globe/globeContainer";
+
 export default function Main({ children }) {
   return (
     <Box as="main">
@@ -13,7 +13,6 @@ export default function Main({ children }) {
         <link rel="apple-touch-icon" href="apple-touch-icon.png" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
       </Head>
-
       <Navbar />
       <GlobeContainer />
       <Container maxW="container.md" position="relative">

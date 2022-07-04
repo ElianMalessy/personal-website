@@ -2,13 +2,13 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { AnimatePresence } from "framer-motion";
 import { createContext } from "react";
 
+import { Chakra } from "../components/chakra";
 import Main from "../components/layout/main";
-import theme from "../components/theme";
 
 export const PathContext = createContext();
 function App({ Component, pageProps, router }) {
   return (
-    <ChakraProvider theme={theme}>
+    <Chakra cookies={pageProps.cookies}>
       <PathContext.Provider value={router.asPath}>
         <Main>
           <AnimatePresence
@@ -24,8 +24,9 @@ function App({ Component, pageProps, router }) {
           </AnimatePresence>
         </Main>
       </PathContext.Provider>
-    </ChakraProvider>
+    </Chakra>
   );
 }
+export { getServerSideProps } from "../components/chakra";
 
 export default App;

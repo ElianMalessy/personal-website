@@ -1,16 +1,9 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { IconButton, useColorMode, useColorModeValue } from "@chakra-ui/react";
 import { SunIcon, MoonIcon } from "@chakra-ui/icons";
-import { startTransition } from "react";
-import { getCookie, setCookie, hasCookie } from "cookies-next";
 
 const ThemeToggleButton = () => {
   const { toggleColorMode } = useColorMode();
-  const toggleColor = () => {
-    toggleColorMode();
-    const color = getCookie("chakra-ui-color-mode");
-    setCookie("chakra-ui-color-mode", color === "dark" ? "light" : "dark");
-  };
 
   return (
     <AnimatePresence exitBeforeEnter initial={false}>
@@ -26,7 +19,7 @@ const ThemeToggleButton = () => {
           aria-label="Toggle theme"
           colorScheme={useColorModeValue("purple", "orange")}
           icon={useColorModeValue(<MoonIcon />, <SunIcon />)}
-          onClick={toggleColor}
+          onClick={toggleColorMode}
         />
       </motion.div>
     </AnimatePresence>
