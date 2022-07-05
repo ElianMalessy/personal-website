@@ -1,8 +1,7 @@
-import { ChakraProvider } from "@chakra-ui/react";
 import { AnimatePresence } from "framer-motion";
 import { createContext } from "react";
 
-import { Chakra } from "../components/chakra";
+import { Chakra } from "../components/chakra/chakra";
 import Main from "../components/layout/main";
 
 export const PathContext = createContext();
@@ -27,6 +26,6 @@ function App({ Component, pageProps, router }) {
     </Chakra>
   );
 }
-export { getServerSideProps } from "../components/chakra";
+export { getServerSideProps } from "../components/chakra/chakra";
 
 export default App;

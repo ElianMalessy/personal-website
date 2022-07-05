@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { Container, Box, useColorModeValue } from "@chakra-ui/react";
 
-import Section from "../components/section";
+import Section from "../components/layout/section";
 import Page from "../components/layout/page";
 export default function Home() {
   return (

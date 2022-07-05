@@ -9,7 +9,7 @@ export default function GlobeContainer() {
   return (
     <Box h="100vh" w="100vw" position="absolute">
       <Suspense fallback={<Loader />}>
-        <Canvas>
+        <Canvas camera={{ position: [10, 0, 0] }}>
           <Globe colorMode={colorMode} />
         </Canvas>
       </Suspense>
