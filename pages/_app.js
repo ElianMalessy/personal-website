@@ -4,6 +4,8 @@ import { createContext } from "react";
 import { Chakra } from "../components/chakra/chakra";
 import Main from "../components/layout/main";
 
+import "../styles/globals.css";
+
 export const PathContext = createContext();
 function App({ Component, pageProps, router }) {
   return (

@@ -17,7 +17,7 @@ export default function Globe({ colorMode }) {
     const elapsedTime = clock.getElapsedTime();
     atmRef.current.rotation.y = Math.PI;
     earthRef.current.rotation.y = elapsedTime / 6;
-    cloudsRef.current.rotation.y = elapsedTime / 5;
+    cloudsRef.current.rotation.y = elapsedTime / 4.5;
   });
   const [normalMap, specularMap, cloudsMap] = useTexture([
     EarthNormalMap.src,
@@ -87,15 +87,6 @@ export default function Globe({ colorMode }) {
       <mesh ref={earthRef} position={[0, -0.2, 0]}>
         <sphereGeometry args={[2, 64, 64]} />
         <meshPhongMaterial specularMap={specularMap} />
-        {colorMode === "light" && (
-          <meshStandardMaterial
-            map={nightMap}
-            onBeforeCompile={shaderFunctionWrapper}
-            normalMap={normalMap}
-            metalness={0.4}
-            roughness={0.7}
-          />
-        )}
         {colorMode === "dark" && (
           <meshStandardMaterial
             onBeforeCompile={shaderFunctionWrapper}
