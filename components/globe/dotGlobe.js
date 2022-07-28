@@ -22,8 +22,8 @@ export default function DotGlobe() {
     document.getElementById("canvas").appendChild(renderer.domElement);
 
     const group = new THREE.Object3D();
-    const DOT_COUNT = 10000;
-    const dotGeometry = new THREE.SphereGeometry(1, 5);
+    const DOT_COUNT = 15000;
+    const dotGeometry = new THREE.SphereGeometry(1, 10);
     const vector = new THREE.Vector3();
 
     const canvas = document.createElement("canvas");
@@ -40,49 +40,64 @@ export default function DotGlobe() {
       // var alpha = imgData.data[3];
       for (let i = DOT_COUNT; i >= 0; i--) {
         const phi = Math.acos(-1 + (2 * i) / DOT_COUNT);
+        // phi only goes from 0 to pi not from 0 to 2pi
         const theta = Math.sqrt(DOT_COUNT * Math.PI) * phi;
-        const r = 100;
+        const r = 110;
         const referenceAngle =
           theta - Math.floor(theta / (2 * Math.PI)) * 2 * Math.PI;
         vector.setFromSphericalCoords(r, phi, theta);
-        const x = Math.round(r * referenceAngle);
-        const y = Math.round(r * Math.log(Math.tan(Math.PI / 4 + phi / 2)));
-        const arr = [180, 181, 176];
-        if (y < 593) {
-          console.log(
-            imgData.data[x * y * 4],
-            imgData.data[x * y * 4 + 1],
-            imgData.data[x * y * 4 + 2],
-            imgData.data[x * y * 4 + 3]
-          );
-          if (arr.indexOf(imgData.data[Math.round(x * y * 4)]) != -1) {
-            console.log("here");
-            continue;
-          }
+
+        const lat = phi * (180 / Math.PI);
+        const long = referenceAngle * (180 / Math.PI);
+        const rownr = Math.floor(lat / 0.5);
+        let colnr = Math.floor(long / 0.5);
+
+        const cell = Math.round(rownr * 720 + colnr);
+        const index = cell * 4;
+        if (colnr <= 1 || colnr >= 718) continue;
+        if (imgData.data[index] !== 0) {
+          continue;
         }
 
-        var material = new THREE.MeshBasicMaterial({
+        const material = new THREE.MeshBasicMaterial({
           color: 0x1a1a1a,
         });
-        var mesh = new THREE.Mesh(dotGeometry, material);
-
+        const mesh = new THREE.Mesh(dotGeometry, material);
         mesh.position.x = vector.x;
         mesh.position.y = vector.y;
         mesh.position.z = vector.z;
         group.add(mesh);
       }
-      console.log(imgData.data);
     };
     img.crossOrigin = "Anonymous";
     img.src =
-      "https://firebasestorage.googleapis.com/v0/b/personal-w-51f5c.appspot.com/o/map.webp?alt=media&token=425071af-9be1-480a-af1b-6dbafc9266c8";
-    // water is the color rgb(181,225,236)
-    // 1200 * 593
+      "https://firebasestorage.googleapis.com/v0/b/personal-w-51f5c.appspot.com/o/world.png?alt=media&token=088adbae-7296-41c1-ac04-6f4f2a1efb72";
+    // 720 * 360
+    group.rotation.x = 0.2;
     scene.add(group);
+    let season = 0.0005;
+    setInterval(() => {
+      if (season > 0) {
+        setInterval(() => {
+          if (season > -0.0005) {
+            season -= 0.00005;
+          }
+        }, 300);
+        console.log(season);
+      } else if (season < 0) {
+        setInterval(() => {
+          if (season < 0.0005) {
+            season += 0.00005;
+          }
+        }, 300);
+        console.log(season);
+      }
+    }, 10000);
+
     function update() {
       group.rotation.set(
-        group.rotation.x,
-        group.rotation.y + 0.005,
+        group.rotation.x + season,
+        group.rotation.y + 0.0035,
         group.rotation.z
       );
 
@@ -93,5 +108,6 @@ export default function DotGlobe() {
     }
     update();
   }, []);
+
   return <></>;
 }
