@@ -2,7 +2,7 @@ import { Box, Container } from "@chakra-ui/react";
 import Head from "next/head";
 
 import Navbar from "./navbar";
-import GlobeContainer from "../globe/globeContainer";
+import DotGlobe from "../globe/dotGlobe";
 
 export default function Main({ children }) {
   return (
@@ -14,7 +14,7 @@ export default function Main({ children }) {
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
       </Head>
       <Navbar />
-      <GlobeContainer />
+      <DotGlobe />
       <Container maxW="container.md" position="relative">
         {children}
       </Container>

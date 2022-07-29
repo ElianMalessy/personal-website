@@ -1,5 +1,6 @@
 import * as THREE from "three";
 import { useEffect, useRef } from "react";
+import { Box } from "@chakra-ui/react";
 export default function DotGlobe() {
   let first = useRef(true);
   useEffect(() => {
@@ -22,7 +23,7 @@ export default function DotGlobe() {
     document.getElementById("canvas").appendChild(renderer.domElement);
 
     const group = new THREE.Object3D();
-    const DOT_COUNT = 15000;
+    const DOT_COUNT = 10000;
     const dotGeometry = new THREE.SphereGeometry(1, 10);
     const vector = new THREE.Vector3();
 
@@ -42,7 +43,7 @@ export default function DotGlobe() {
         const phi = Math.acos(-1 + (2 * i) / DOT_COUNT);
         // phi only goes from 0 to pi not from 0 to 2pi
         const theta = Math.sqrt(DOT_COUNT * Math.PI) * phi;
-        const r = 110;
+        const r = 100;
         const referenceAngle =
           theta - Math.floor(theta / (2 * Math.PI)) * 2 * Math.PI;
         vector.setFromSphericalCoords(r, phi, theta);
@@ -54,7 +55,7 @@ export default function DotGlobe() {
 
         const cell = Math.round(rownr * 720 + colnr);
         const index = cell * 4;
-        if (colnr <= 1 || colnr >= 718) continue;
+        if (colnr <= 1 || colnr >= 719) continue;
         if (imgData.data[index] !== 0) {
           continue;
         }
@@ -73,26 +74,26 @@ export default function DotGlobe() {
     img.src =
       "https://firebasestorage.googleapis.com/v0/b/personal-w-51f5c.appspot.com/o/world.png?alt=media&token=088adbae-7296-41c1-ac04-6f4f2a1efb72";
     // 720 * 360
-    group.rotation.x = 0.2;
+    group.rotation.x = 0.1;
     scene.add(group);
     let season = 0.0005;
     setInterval(() => {
       if (season > 0) {
-        setInterval(() => {
+        const intv = setInterval(() => {
           if (season > -0.0005) {
             season -= 0.00005;
           }
         }, 300);
-        console.log(season);
+        if (season <= -0.0005) clearInterval(intv);
       } else if (season < 0) {
-        setInterval(() => {
+        const intv = setInterval(() => {
           if (season < 0.0005) {
             season += 0.00005;
           }
         }, 300);
-        console.log(season);
+        if (season >= 0.0005) clearInterval(intv);
       }
-    }, 10000);
+    }, 8000);
 
     function update() {
       group.rotation.set(
@@ -109,5 +110,5 @@ export default function DotGlobe() {
     update();
   }, []);
 
-  return <></>;
+  return <Box id="canvas" position="absolute" />;
 }
