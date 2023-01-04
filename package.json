@@ -30,6 +30,7 @@
     "bracketSpacing": true
   },
   "devDependencies": {
-    "eslint": "^8.19.0"
+    "eslint": "^8.19.0",
+    "eslint-config-next": "^13.1.1"
   }
 }
