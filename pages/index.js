@@ -32,7 +32,7 @@ export default function Home() {
         <LazyDotGlobe />
         <Section delay={0.1}>
           I have been programming for 3+ years and am experienced with
-          HTML/CSS/JS, ReactJs, NexJs, Svelte, R and C/C++. Currently I am
+          HTML/CSS/JS, ReactJs, NextJs, Svelte, R and C/C++. Currently I am
           developing a Game Engine using C++ and the Vulkan graphics
           specification as well as learning other languages like Flutter.
         </Section>
