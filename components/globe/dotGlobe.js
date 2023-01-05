@@ -79,29 +79,29 @@ export default function DotGlobe() {
     // 720 * 360
     group.current.rotation.x = 0.1;
     scene.add(group.current);
-    let season = 0.0005;
+    let season = 10;
     setInterval(() => {
       if (season > 0) {
         const intv = setInterval(() => {
-          if (season > -0.0005) {
-            season -= 0.00005;
+          if (season > -10) {
+            season -= 1;
           }
         }, 300);
-        if (season <= -0.0005) clearInterval(intv);
+        if (season <= -10) clearInterval(intv);
       } else if (season < 0) {
         const intv = setInterval(() => {
-          if (season < 0.0005) {
-            season += 0.00005;
+          if (season < 10) {
+            season += 1;
           }
         }, 300);
-        if (season >= 0.0005) clearInterval(intv);
+        if (season >= 10) clearInterval(intv);
       }
     }, 8000);
 
     function update() {
       //console.log(season);
       group.current.rotation.set(
-        group.current.rotation.x + season,
+        group.current.rotation.x + season / 25000,
         group.current.rotation.y + 0.0035,
         group.current.rotation.z
       );
