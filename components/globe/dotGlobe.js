@@ -90,9 +90,9 @@ export default function DotGlobe() {
     };
     setInterval(() => {
       let bool;
-      if (group.current.rotation.x >= Math.PI / 4) {
+      if (group.current.rotation.x >= Math.PI / 6) {
         bool = 1;
-      } else if (group.current.rotation.x <= -(Math.PI / 14)) {
+      } else if (group.current.rotation.x <= 0) {
         bool = 2;
       }
       if ((bool === 1 && season >= -3) || (bool === 2 && season <= 3)) {
@@ -131,7 +131,6 @@ export default function DotGlobe() {
     if (container && rendererState) {
       const scW = container.clientWidth;
       const scH = container.clientHeight;
-      console.log(scW, scH);
       rendererState.setSize(scW, scH);
     }
   }, [rendererState]);
@@ -147,6 +146,7 @@ export default function DotGlobe() {
       ref={refContainer}
       h="100%"
       w="100%"
+      marginTop={"4rem"}
       display={"flex"}
       justifyContent="center"
     />

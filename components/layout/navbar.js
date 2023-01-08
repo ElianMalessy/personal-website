@@ -14,7 +14,6 @@ import {
   MenuButton,
   IconButton,
   useColorModeValue,
-  useColorMode,
 } from "@chakra-ui/react";
 import {
   IoLogoGithub,
@@ -182,7 +181,7 @@ const Navbar = () => {
                   <MenuItem as={Link}>Projects</MenuItem>
                 </NextLink>
                 <NextLink
-                  href="https://www.linkedin.com/in/elian-malessy-2720211ba/"
+                  href="https://www.linkedin.com/in/elian-hijmans-malessy-2720211ba/"
                   passHref
                 >
                   <MenuItem as={Link}>Linkedin</MenuItem>
