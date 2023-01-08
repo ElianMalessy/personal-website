@@ -6,7 +6,7 @@ import { WorkGridItem } from "../components/layout/gridItem";
 
 import tradingSimPic from "../public/stockmarketpic.png";
 import chessPic from "../public/chesspic.png";
-import cropPic from "../public/cropPic.png";
+import cropPic from "../public/croppic.png";
 
 export default function projects() {
   return (

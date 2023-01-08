@@ -84,7 +84,7 @@ export default function Home() {
           <Box style={{ textIndent: "1rem" }} mb="1rem">
             <Text> Learned NextJS, Svelte, React Native, R</Text>
             <Text>
-              Used R as a Bioinformatics research assistant @
+              Used R as a Bioinformatics research assistant @{" "}
               <NextLink href="https://melotto.ucdavis.edu/" passHref>
                 <Link color={"teal"}>
                   Melotto Lab <ExternalLinkIcon />
