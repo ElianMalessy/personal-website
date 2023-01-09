@@ -7,6 +7,7 @@ import { WorkGridItem } from "../components/layout/gridItem";
 import tradingSimPic from "../public/stockmarketpic.png";
 import chessPic from "../public/chesspic.png";
 import cropPic from "../public/croppic.png";
+import foodPic from "../public/foodpic.png";
 
 export default function projects() {
   return (
@@ -29,6 +30,16 @@ export default function projects() {
           </Section>
           <Section>
             <WorkGridItem
+              id="https://github.com/ElianMalessy/FoodFactsApp"
+              title="FoodFactsApp"
+              thumbnail={foodPic}
+            >
+              An app that allows users to search for environmentally and
+              nutritionally beneficial foods. It also can be used to scan
+            </WorkGridItem>
+          </Section>
+          <Section delay={0.1}>
+            <WorkGridItem
               id="https://first-project-b7070.web.app/"
               title="Chess For Friends"
               thumbnail={chessPic}
@@ -42,7 +53,10 @@ export default function projects() {
               id="https://crop-research-website.vercel.app/"
               title="IMAGE Research"
               thumbnail={cropPic}
-            ></WorkGridItem>
+            >
+              A website displaying crop data collection research funded by the
+              Gates Foundation done in African countries
+            </WorkGridItem>
           </Section>
         </SimpleGrid>
       </Container>
