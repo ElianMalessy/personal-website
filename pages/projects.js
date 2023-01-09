@@ -24,8 +24,9 @@ export default function projects() {
               title="Stock Market Game"
               thumbnail={tradingSimPic}
             >
-              A stock market simulator where users can quote, buy and sell
-              stocks with real time data from the stock market
+              A stock market game where users can simulate buying, selling and
+              getting a quote of stocks with real time data from the stock
+              market
             </WorkGridItem>
           </Section>
           <Section>
