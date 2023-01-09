@@ -26,7 +26,7 @@ export default function projects() {
             >
               A stock market game where users can simulate buying, selling and
               getting a quote of stocks with real time data from the stock
-              market
+              market.
             </WorkGridItem>
           </Section>
           <Section>
@@ -36,7 +36,8 @@ export default function projects() {
               thumbnail={foodPic}
             >
               An app that allows users to search for environmentally and
-              nutritionally beneficial foods. It also can be used to scan
+              nutritionally beneficial foods. It can also scan barcodes to
+              display the Eco and Nutri scores of products.
             </WorkGridItem>
           </Section>
           <Section delay={0.1}>
