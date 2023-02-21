@@ -8,7 +8,6 @@ import {
   Button,
   Text,
   Heading,
-  LinkOverlay,
   Link,
   LinkBox,
 } from "@chakra-ui/react";
@@ -24,7 +23,7 @@ export default function Home() {
         <meta name="description" content="Homepage" />
       </Head>
       <Container>
-        <Section delay={0.1}>
+        <Section delay={0.3}>
           <Box
             borderRadius="lg"
             mb={6}
@@ -36,15 +35,15 @@ export default function Home() {
           </Box>
         </Section>
 
-        <Section delay={0.1}>
+        <Section delay={0.3}>
           I am a self-taught freelance full-stack developer with a passion for
           building interactive websites with engaging UI.
         </Section>
-        <Section delay={0.1}>
+        <Section delay={0.3}>
           Currently I am developing a Game Engine using C++ and the Vulkan
           graphics API.
         </Section>
-        <Section delay={0.2}>
+        <Section delay={0.3}>
           <Heading size={"md"} variant="section-title">
             Timeline
           </Heading>

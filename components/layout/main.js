@@ -25,6 +25,7 @@ export default function Main({ children }) {
         position="relative"
         p="1rem 1rem 1rem 1rem"
       >
+        {/* change it so that the text doesnt load in until the globe is there because otherwise the delay effect is janky */}
         <LazyDotGlobe />
         {children}
         <Footer />
