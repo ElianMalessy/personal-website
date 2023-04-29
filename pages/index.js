@@ -49,35 +49,31 @@ export default function Home() {
               Timeline
             </Heading>
             <Text as="span" fontWeight={"bold"}>
-              2020
-            </Text>
-            <Box style={{ textIndent: "1rem" }} mb="1rem">
-              <Text>Started CS50</Text>
-              <Text>Learned C/C++, Python, HTML/CSS/JS, ReactJS</Text>
-            </Box>
-            <Text as="span" fontWeight={"bold"}>
               2021
             </Text>
             <Box style={{ textIndent: "1rem" }} mb="1rem">
               <Text>Completed CS50</Text>
+              <Text>Learned C/C++, Python, HTML/CSS/JS, ReactJS</Text>
               <LinkBox>
-                <NextLink
+                <Link
+                  color={"teal"}
                   href="https://elianmalessy.pythonanywhere.com/"
-                  passHref
+                  isExternal
                 >
-                  <Link color={"teal"}>
-                    Stock Market Game <ExternalLinkIcon />
-                  </Link>
-                </NextLink>
+                  Stock Market Game <ExternalLinkIcon />
+                </Link>
               </LinkBox>
               <LinkBox>
-                <NextLink href="https://first-project-b7070.web.app/" passHref>
-                  <Link color={"teal"}>
-                    Chess Website <ExternalLinkIcon />
-                  </Link>
-                </NextLink>
+                <Link
+                  color={"teal"}
+                  href="https://first-project-b7070.web.app/"
+                  isExternal
+                >
+                  Chess Website <ExternalLinkIcon />
+                </Link>
               </LinkBox>
             </Box>
+
             <Text as="span" fontWeight={"bold"}>
               2022
             </Text>
@@ -85,41 +81,63 @@ export default function Home() {
               <Text> Learned NextJS, Svelte, React Native, R</Text>
               <Text>
                 Used R as a Bioinformatics research assistant @{" "}
-                <NextLink href="https://melotto.ucdavis.edu/" passHref>
-                  <Link color={"teal"}>
-                    Melotto Lab <ExternalLinkIcon />
-                  </Link>
-                </NextLink>
+                <Link
+                  color={"teal"}
+                  href="https://melotto.ucdavis.edu/"
+                  isExternal
+                >
+                  Melotto Lab <ExternalLinkIcon />
+                </Link>
               </Text>
               <LinkBox>
-                <NextLink
+                <Link
+                  color={"teal"}
                   href="https://crop-research-website.vercel.app/"
-                  passHref
+                  isExternal
                 >
-                  <Link color={"teal"}>
-                    Crop Research Website <ExternalLinkIcon />
-                  </Link>
-                </NextLink>
+                  Crop Research Website <ExternalLinkIcon />
+                </Link>
               </LinkBox>
               <LinkBox>
-                <NextLink
+                <Link
+                  color={"teal"}
                   href="https://github.com/ElianMalessy/FoodFactsApp"
-                  passHref
+                  isExternal
                 >
-                  <Link color={"teal"}>
-                    FoodFactsApp <ExternalLinkIcon />
-                  </Link>
-                </NextLink>
+                  FoodFactsApp <ExternalLinkIcon />
+                </Link>
               </LinkBox>
               <LinkBox>
-                <NextLink
+                <Link
+                  color={"teal"}
                   href="https://github.com/ElianMalessy/VulkanMinecraft"
-                  passHref
+                  isExternal
                 >
-                  <Link color={"teal"}>
-                    Vulkan Game Engine <ExternalLinkIcon />
-                  </Link>
-                </NextLink>
+                  Vulkan Game Engine <ExternalLinkIcon />
+                </Link>
+              </LinkBox>
+            </Box>
+            <Text as="span" fontWeight={"bold"}>
+              2023
+            </Text>
+            <Box style={{ textIndent: "1rem" }} mb="1rem">
+              <LinkBox>
+                <Link
+                  color={"teal"}
+                  href="https://github.com/ElianMalessy/Image-to-desmos"
+                  isExternal
+                >
+                  Image to Desmos website <ExternalLinkIcon />
+                </Link>
+              </LinkBox>
+              <LinkBox>
+                <Link
+                  color={"teal"}
+                  href="https://github.com/ElianMalessy/Next-Chess-App"
+                  isExternal
+                >
+                  Updated Chess App <ExternalLinkIcon />
+                </Link>
               </LinkBox>
             </Box>
           </Section>
