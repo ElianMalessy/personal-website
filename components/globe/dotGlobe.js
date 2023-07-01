@@ -63,13 +63,12 @@ export default function DotGlobe() {
       return;
     }
     first.current = false;
-
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(
       75,
       window.innerWidth / window.innerHeight,
       0.1,
-      1000
+      2000
     );
     camera.position.set(0, 0, 285);
 
@@ -80,42 +79,58 @@ export default function DotGlobe() {
     container.appendChild(renderer.domElement);
     setRendererState(renderer);
 
-    group.current.rotation.x = 0.1;
     scene.add(group.current);
     let season = 3;
 
     const operation = (bool) => {
-      if (bool === 1) {
+      if (bool === true) {
         season -= 1;
       } else {
         season += 1;
       }
     };
-    setInterval(() => {
+    function changeSeasons() {
+      requestAnimationFrame(changeSeasons);
       let bool;
       if (group.current.rotation.x >= Math.PI / 6) {
-        bool = 1;
+        bool = true;
       } else if (group.current.rotation.x <= 0) {
-        bool = 2;
+        bool = false;
       }
-      if ((bool === 1 && season >= -3) || (bool === 2 && season <= 3)) {
+      if ((bool === true && season >= -3) || (bool === false && season <= 3)) {
         operation(bool);
       }
-    }, 1000);
+    }
+    changeSeasons();
+    // let frameCount = 0;
+    // let startTime;
+    // let previousTime;
+
+    // function animate(timestamp) {
+    //   if (!startTime) startTime = timestamp;
+
+    //   const elapsed = timestamp - (previousTime || timestamp);
+    //   previousTime = timestamp;
+    //   frameCount++;
+    //   if (timestamp - startTime >= 1000) {
+    //     const frameRate = frameCount / ((timestamp - startTime) / 1000);
+    //     console.log("Frame rate:", frameRate.toFixed(2), "fps");
+    //     frameCount = 0;
+    //     startTime = timestamp;
+    //   }
+    //   requestAnimationFrame(animate);
+    // }
+    // requestAnimationFrame(animate);
 
     function update() {
+      requestAnimationFrame(update);
       group.current.rotation.set(
         group.current.rotation.x + season / 7500,
         group.current.rotation.y + 0.0035,
         group.current.rotation.z
       );
-
-      camera.lookAt(scene.position);
       renderer.render(scene, camera);
-
-      requestAnimationFrame(update);
     }
-
     update();
   }, []);
 
