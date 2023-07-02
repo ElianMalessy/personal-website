@@ -2,8 +2,8 @@ import * as THREE from "three";
 import { useEffect, useRef, useCallback, useState, useMemo } from "react";
 import { useColorMode } from "@chakra-ui/react";
 export default function DotGlobe() {
-  const first = useRef(true);
   const first1 = useRef(true);
+  const first2 = useRef(true);
 
   const [rendererState, setRendererState] = useState();
   const { colorMode } = useColorMode();
@@ -83,8 +83,8 @@ export default function DotGlobe() {
   }, [group]);
 
   useEffect(() => {
-    if (first.current === true) {
-      first.current = false;
+    if (first2.current === true) {
+      first2.current = false;
       const scene = new THREE.Scene();
       const camera = new THREE.PerspectiveCamera(
         75,
