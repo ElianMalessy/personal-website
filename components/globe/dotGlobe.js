@@ -104,33 +104,23 @@ export default function DotGlobe() {
       container.appendChild(renderer.domElement);
       setRendererState(renderer);
 
-      group.rotation.x = 0.5;
-      group.rotation.y = 1.5;
+      group.rotation.x = 0.2;
+      group.rotation.y = 0.1;
       scene.add(group);
 
-      let season = 1;
+      let season = 500;
       function changeSeasons() {
         requestAnimationFrame(changeSeasons);
-        let bool;
-        if (group.rotation.x >= Math.PI / 6) {
-          bool = true;
-        } else if (group.rotation.x <= 0) {
-          bool = false;
-        }
-        if (
-          (bool === true && season >= -3) ||
-          (bool === false && season <= 3)
-        ) {
-          if (bool === true) season -= 1;
-          else season += 1;
-        }
+        console.log(season);
+        if (group.rotation.x >= Math.PI / 4 && season >= -500) season--;
+        else if (group.rotation.x <= -0.05 && season <= 500) season++;
       }
       changeSeasons();
 
       function update() {
         requestAnimationFrame(update);
         group.rotation.set(
-          group.rotation.x + season / 25000,
+          group.rotation.x + season / 2500000,
           group.rotation.y + 0.002,
           group.rotation.z
         );

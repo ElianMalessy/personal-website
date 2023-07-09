@@ -41,8 +41,7 @@ export default function Home() {
             building interactive websites with engaging UI.
           </Section>
           <Section delay={0.3}>
-            Currently I am developing a Game Engine using C++ and the Vulkan
-            graphics API.
+            Currently I am rewriting my chess website to use NextJS
           </Section>
           <Section delay={0.3}>
             <Heading size={"md"} variant="section-title">
