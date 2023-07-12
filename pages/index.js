@@ -30,6 +30,7 @@ export default function Home() {
               mb={6}
               p={3}
               textAlign="center"
+              shadow={"lg"}
               bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}
             >
               Hello, my name is Elian Malessy!
