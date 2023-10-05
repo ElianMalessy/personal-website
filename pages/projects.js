@@ -20,13 +20,14 @@ export default function projects() {
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
           <Section>
             <WorkGridItem
-              id="https://elianmalessy.pythonanywhere.com/"
+              id="https://github.com/ElianMalessy/stock-trading-simulator"
               title="Stock Market Game"
               thumbnail={tradingSimPic}
             >
               A stock market game where users can simulate buying, selling and
               getting a quote of stocks with real time data from the stock
-              market.
+              market. (IEX changed their terms of service, so this website is no
+              longer active)
             </WorkGridItem>
           </Section>
           <Section>
@@ -42,12 +43,12 @@ export default function projects() {
           </Section>
           <Section delay={0.1}>
             <WorkGridItem
-              id="https://first-project-b7070.web.app/"
+              id="next-chess-app-git-master-elianmalessy.vercel.app"
               title="Chess For Friends"
               thumbnail={chessPic}
             >
-              A chess website where users can send links of games to play with
-              each other.
+              A chess website where users can friend each other, and send links
+              of games to play with each other.
             </WorkGridItem>
           </Section>
           <Section delay={0.1}>

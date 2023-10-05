@@ -42,7 +42,7 @@ export default function Home() {
             building interactive websites with engaging UI.
           </Section>
           <Section delay={0.3}>
-            Currently I am rewriting my chess website to use NextJS
+            Currently I am rewriting my chess website to use NextJS 13
           </Section>
           <Section delay={0.3}>
             <Heading size={"md"} variant="section-title">
@@ -57,7 +57,7 @@ export default function Home() {
               <LinkBox>
                 <Link
                   color={"teal"}
-                  href="https://elianmalessy.pythonanywhere.com/"
+                  href="https://github.com/ElianMalessy/stock-trading-simulator"
                   isExternal
                 >
                   Stock Market Game <ExternalLinkIcon />
@@ -66,7 +66,7 @@ export default function Home() {
               <LinkBox>
                 <Link
                   color={"teal"}
-                  href="https://first-project-b7070.web.app/"
+                  href="https://github.com/ElianMalessy/Chess-App"
                   isExternal
                 >
                   Chess Website <ExternalLinkIcon />
@@ -96,6 +96,15 @@ export default function Home() {
                   isExternal
                 >
                   Crop Research Website <ExternalLinkIcon />
+                </Link>
+              </LinkBox>
+              <LinkBox>
+                <Link
+                  color={"teal"}
+                  href="https://www.kickstartcodingtutors.com/"
+                  isExternal
+                >
+                  Programming Tutoring Website
                 </Link>
               </LinkBox>
               <LinkBox>
@@ -133,7 +142,7 @@ export default function Home() {
               <LinkBox>
                 <Link
                   color={"teal"}
-                  href="https://github.com/ElianMalessy/Next-Chess-App"
+                  href="https://next-chess-app-git-master-elianmalessy.vercel.app/"
                   isExternal
                 >
                   Updated Chess App <ExternalLinkIcon />
