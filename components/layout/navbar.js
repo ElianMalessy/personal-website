@@ -147,7 +147,7 @@ const Navbar = () => {
             LinkedIn
           </LinkItem>
           <LinkItem
-            href="https://firebasestorage.googleapis.com/v0/b/personal-w-51f5c.appspot.com/o/Resume.pdf?alt=media&token=575ff3dc-b25e-43c1-a560-413b234342fc"
+            href="https://firebasestorage.googleapis.com/v0/b/personal-w-51f5c.appspot.com/o/New%20Resume.pdf?alt=media&token=94e8c1d7-e19d-418c-b891-230da0702b31"
             display="inline-flex"
             alignItems="center"
             style={{ gap: 4, marginRight: "1rem" }}

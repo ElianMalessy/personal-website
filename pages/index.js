@@ -136,7 +136,7 @@ export default function Home() {
                   href="https://github.com/ElianMalessy/Image-to-desmos"
                   isExternal
                 >
-                  Image to Desmos tool <ExternalLinkIcon />
+                  Image to Desmos website <ExternalLinkIcon />
                 </Link>
               </LinkBox>
               <LinkBox>
