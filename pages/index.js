@@ -136,13 +136,13 @@ export default function Home() {
                   href="https://github.com/ElianMalessy/Image-to-desmos"
                   isExternal
                 >
-                  Image to Desmos website <ExternalLinkIcon />
+                  Image to Desmos tool <ExternalLinkIcon />
                 </Link>
               </LinkBox>
               <LinkBox>
                 <Link
                   color={"teal"}
-                  href="https://next-chess-app-git-master-elianmalessy.vercel.app/"
+                  href="https://next-chess-app.vercel.app"
                   isExternal
                 >
                   Updated Chess App <ExternalLinkIcon />
