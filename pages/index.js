@@ -142,7 +142,7 @@ export default function Home() {
               <LinkBox>
                 <Link
                   color={"teal"}
-                  href="https://next-chess-app.vercel.app"
+                  href="https://next-chess-app.vercel.app/"
                   isExternal
                 >
                   Updated Chess App <ExternalLinkIcon />

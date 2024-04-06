@@ -43,7 +43,7 @@ export default function projects() {
           </Section>
           <Section delay={0.1}>
             <WorkGridItem
-              id="next-chess-app-git-master-elianmalessy.vercel.app"
+              id="https://next-chess-app.vercel.app/"
               title="Chess For Friends"
               thumbnail={chessPic}
             >
