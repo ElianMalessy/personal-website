@@ -38,13 +38,13 @@ export default function Home() {
           </Section>
 
           <Section delay={0.3}>
-            I am an undergraduate student studying computer science at UC Irvine. 
-            I am full-stack developer with a passion for building interactive 
-            products that help a community of people.
+            I am an undergraduate studying computer science at UC Irvine with experience
+            in full-stack development. My passion lies in building interactive 
+            products that positively impact communities.
           </Section>
-          <Section delay={0.3}>
+          {/* <Section delay={0.3}>
             Currently I am developing ZotNFound
-          </Section>
+          </Section> */}
           <Section delay={0.3}>
             <Heading size={"md"} variant="section-title">
               Timeline
@@ -121,7 +121,7 @@ export default function Home() {
                 Learned Flask, C++, MIPS assembly
               </Text>
               <Text>
-                Used Flask for API's in the lab of Professor G.P. Li @{" "}
+                Used Flask for API&apos;s in the lab of Professor G.P. Li @{" "}
                 <Link
                   color={"teal"}
                   href="https://github.com/ElianMalessy/FoodFactsApp"
