@@ -33,16 +33,17 @@ export default function Home() {
               shadow={"lg"}
               bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}
             >
-              Hello, my name is Elian Malessy!
+              Hello, my name is Elian Hijmans Malessy!
             </Box>
           </Section>
 
           <Section delay={0.3}>
-            I am a self-taught freelance full-stack developer with a passion for
-            building interactive websites with engaging UI.
+            I am an undergraduate student studying computer science at UC Irvine. 
+            I am full-stack developer with a passion for building interactive 
+            products that help a community of people.
           </Section>
           <Section delay={0.3}>
-            Currently I am rewriting my chess website to use NextJS 13
+            Currently I am developing ZotNFound
           </Section>
           <Section delay={0.3}>
             <Heading size={"md"} variant="section-title">
@@ -53,7 +54,7 @@ export default function Home() {
             </Text>
             <Box style={{ textIndent: "1rem" }} mb="1rem">
               <Text>Completed CS50</Text>
-              <Text>Learned C/C++, Python, HTML/CSS/JS, ReactJS</Text>
+              <Text>Learned C, Python, HTML/CSS/JS, ReactJS</Text>
               <LinkBox>
                 <Link
                   color={"teal"}
@@ -101,44 +102,34 @@ export default function Home() {
               <LinkBox>
                 <Link
                   color={"teal"}
-                  href="https://www.kickstartcodingtutors.com/"
-                  isExternal
-                >
-                  Programming Tutoring Website
-                </Link>
-              </LinkBox>
-              <LinkBox>
-                <Link
-                  color={"teal"}
                   href="https://github.com/ElianMalessy/FoodFactsApp"
                   isExternal
                 >
                   FoodFactsApp <ExternalLinkIcon />
                 </Link>
               </LinkBox>
-              <LinkBox>
-                <Link
-                  color={"teal"}
-                  href="https://github.com/ElianMalessy/VulkanMinecraft"
-                  isExternal
-                >
-                  Vulkan Game Engine <ExternalLinkIcon />
-                </Link>
-              </LinkBox>
+              
             </Box>
             <Text as="span" fontWeight={"bold"}>
               2023
             </Text>
             <Box style={{ textIndent: "1rem" }} mb="1rem">
-              <LinkBox>
+              <Text>
+                Enrolled in UC Irvine with a degree in computer science
+              </Text>
+              <Text>
+                Learned Flask, C++, MIPS assembly
+              </Text>
+              <Text>
+                Used Flask for API's in the lab of Professor G.P. Li @{" "}
                 <Link
                   color={"teal"}
-                  href="https://github.com/ElianMalessy/Image-to-desmos"
+                  href="https://github.com/ElianMalessy/FoodFactsApp"
                   isExternal
                 >
-                  Image to Desmos website <ExternalLinkIcon />
+                  Calit2 <ExternalLinkIcon />
                 </Link>
-              </LinkBox>
+              </Text>
               <LinkBox>
                 <Link
                   color={"teal"}
@@ -148,6 +139,34 @@ export default function Home() {
                   Updated Chess App <ExternalLinkIcon />
                 </Link>
               </LinkBox>
+              <LinkBox>
+                <Link
+                  color={"teal"}
+                  href="https://zotnfound.com/"
+                  isExternal
+                >
+                  ZotNFound <ExternalLinkIcon />
+                </Link>
+              </LinkBox>
+              </Box>
+
+            <Text as="span" fontWeight={"bold"}>
+              2024
+            </Text>
+            <Box style={{ textIndent: "1rem" }} mb="1rem">
+              <Text>
+                Learned ML techniques, embedded systems
+              </Text>
+              <Text>
+                Wrote C++ on the avionics team @{" "}
+                <Link
+                  color={"teal"}
+                  href="https://projects.eng.uci.edu/projects/2022-2023/uci-cubesat"
+                  isExternal
+                >
+                  UCI CubeSat<ExternalLinkIcon />
+                </Link>
+              </Text>
             </Box>
           </Section>
           <Box align="center" my={4}>

@@ -4,10 +4,10 @@ import Page from "../components/layout/page";
 import Section from "../components/layout/section";
 import { WorkGridItem } from "../components/layout/gridItem";
 
-import tradingSimPic from "../public/stockmarketpic.png";
 import chessPic from "../public/chesspic.png";
 import cropPic from "../public/croppic.png";
 import foodPic from "../public/foodpic.png";
+import zotnfoundPic from '../public/zotnfoundpic.png'
 
 export default function projects() {
   return (
@@ -20,14 +20,13 @@ export default function projects() {
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
           <Section>
             <WorkGridItem
-              id="https://github.com/ElianMalessy/stock-trading-simulator"
-              title="Stock Market Game"
-              thumbnail={tradingSimPic}
+              id="https://zotnfound.com/"
+              title="ZotNFound"
+              thumbnail={zotnfoundPic}
             >
-              A stock market game where users can simulate buying, selling and
-              getting a quote of stocks with real time data from the stock
-              market. (IEX changed their terms of service, so this website is no
-              longer active)
+              A lost and found website and app for a user base of over 1.8k people at UC Irvine.
+              Users can add new lost items with detailed information including pictures and a marker
+              on a map of campus. 
             </WorkGridItem>
           </Section>
           <Section>
