@@ -155,7 +155,7 @@ export default function Home() {
             </Text>
             <Box style={{ textIndent: "1rem" }} mb="1rem">
               <Text>
-                Learned ML techniques, embedded systems
+                Learned Docker, ML techniques, embedded systems
               </Text>
               <Text>
                 Wrote C++ on the avionics team @{" "}
