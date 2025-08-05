@@ -24,7 +24,7 @@ export default function DotGlobe() {
 
       const ctx = canvas.getContext("2d");
       const img = new Image();
-      img.onload = function () {
+      img.onload = function() {
         ctx.drawImage(img, 0, 0, img.naturalWidth, img.naturalHeight);
         var imgData = ctx.getImageData(
           0,
@@ -69,7 +69,7 @@ export default function DotGlobe() {
       };
       img.crossOrigin = "Anonymous";
       img.src =
-        "https://firebasestorage.googleapis.com/v0/b/personal-w-51f5c.appspot.com/o/world.png?alt=media&token=088adbae-7296-41c1-ac04-6f4f2a1efb72";
+        "https://firebasestorage.googleapis.com/v0/b/personal-w-51f5c.appspot.com/o/Elian_Hijmans_Malessy_cv.pdf?alt=media&token=514e1d7f-07dd-4e0e-875d-3455d52ea3d5";
       // 720 * 360
     }
     return () => {
