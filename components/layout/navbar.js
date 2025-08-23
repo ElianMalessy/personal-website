@@ -186,7 +186,7 @@ const Navbar = () => {
                   <MenuItem as={Link}>Github</MenuItem>
                 </NextLink>
                 <NextLink
-                  href="https://firebasestorage.googleapis.com/v0/b/personal-w-51f5c.appspot.com/o/Elian_Hijmans_Malessy_resume.pdf?alt=media&token=3d97ef42-09a5-4dbe-b53d-b35e2917c615"
+                  href="https://firebasestorage.googleapis.com/v0/b/personal-w-51f5c.appspot.com/o/Elian_Hijmans_Malessy_resume.pdf?alt=media&token=a7211f2a-20cc-46b8-9a8b-f85a9ff4f51c"
                   passHref
                 >
                   <MenuItem as={Link}>Resume</MenuItem>
