@@ -147,7 +147,7 @@ const Navbar = () => {
             LinkedIn
           </LinkItem>
           <LinkItem
-            href="https://firebasestorage.googleapis.com/v0/b/personal-w-51f5c.appspot.com/o/Elian_Hijmans_Malessy_resume.pdf?alt=media&token=8a666669-7b79-4598-bd2a-82168824216b"
+            href="https://firebasestorage.googleapis.com/v0/b/personal-w-51f5c.appspot.com/o/Elian_Hijmans_Malessy_resume.pdf?alt=media&token=4e5f98eb-a4fb-4f90-8182-696ae18038f2"
             display="inline-flex"
             alignItems="center"
             style={{ gap: 4, marginRight: "1rem" }}
@@ -186,7 +186,7 @@ const Navbar = () => {
                   <MenuItem as={Link}>Github</MenuItem>
                 </NextLink>
                 <NextLink
-                  href="https://firebasestorage.googleapis.com/v0/b/personal-w-51f5c.appspot.com/o/Elian_Hijmans_Malessy_resume.pdf?alt=media&token=8a666669-7b79-4598-bd2a-82168824216b"
+                  href="https://firebasestorage.googleapis.com/v0/b/personal-w-51f5c.appspot.com/o/Elian_Hijmans_Malessy_resume.pdf?alt=media&token=4e5f98eb-a4fb-4f90-8182-696ae18038f2"
                   passHref
                 >
                   <MenuItem as={Link}>Resume</MenuItem>
