@@ -147,11 +147,13 @@ const Navbar = () => {
             LinkedIn
           </LinkItem>
           <LinkItem
-            href="https://drive.google.com/file/d/1xyuZxmHP0vLTS4WxGN467-vS092jVywt/view?usp=sharing"
+            href="/Elian_Hijmans_Malessy_resume.pdf"
             display="inline-flex"
             alignItems="center"
             style={{ gap: 4, marginRight: "1rem" }}
             path={path}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <IoNewspaperOutline />
             Resume
@@ -186,8 +188,9 @@ const Navbar = () => {
                   <MenuItem as={Link}>Github</MenuItem>
                 </NextLink>
                 <NextLink
-                  href="https://drive.google.com/file/d/1xyuZxmHP0vLTS4WxGN467-vS092jVywt/view?usp=sharing"
-                  passHref
+                  href="/Elian_Hijmans_Malessy_resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <MenuItem as={Link}>Resume</MenuItem>
                 </NextLink>

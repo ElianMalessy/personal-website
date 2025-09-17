@@ -69,7 +69,7 @@ export default function DotGlobe() {
       };
       img.crossOrigin = "Anonymous";
       img.src =
-        "https://firebasestorage.googleapis.com/v0/b/personal-w-51f5c.appspot.com/o/world.png?alt=media&token=088adbae-7296-41c1-ac04-6f4f2a1efb72";
+        "/world.png";
       // 720 * 360
     }
     return () => {
