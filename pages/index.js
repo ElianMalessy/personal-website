@@ -39,7 +39,7 @@ export default function Home() {
 
           <Section delay={0.3}>
             I am an undergraduate studying computer science at UC Irvine with experience
-            in full-stack development. My passion lies in building interactive 
+            in full-stack development. My passion lies in building interactive
             products that positively impact communities.
           </Section>
           {/* <Section delay={0.3}>
@@ -55,24 +55,6 @@ export default function Home() {
             <Box style={{ textIndent: "1rem" }} mb="1rem">
               <Text>Completed CS50</Text>
               <Text>Learned C, Python, HTML/CSS/JS, ReactJS</Text>
-              <LinkBox>
-                <Link
-                  color={"teal"}
-                  href="https://github.com/ElianMalessy/stock-trading-simulator"
-                  isExternal
-                >
-                  Stock Market Game <ExternalLinkIcon />
-                </Link>
-              </LinkBox>
-              <LinkBox>
-                <Link
-                  color={"teal"}
-                  href="https://github.com/ElianMalessy/Chess-App"
-                  isExternal
-                >
-                  Chess Website <ExternalLinkIcon />
-                </Link>
-              </LinkBox>
             </Box>
 
             <Text as="span" fontWeight={"bold"}>
@@ -93,22 +75,13 @@ export default function Home() {
               <LinkBox>
                 <Link
                   color={"teal"}
-                  href="https://crop-research-website.vercel.app/"
-                  isExternal
-                >
-                  Crop Research Website <ExternalLinkIcon />
-                </Link>
-              </LinkBox>
-              <LinkBox>
-                <Link
-                  color={"teal"}
                   href="https://github.com/ElianMalessy/FoodFactsApp"
                   isExternal
                 >
                   FoodFactsApp <ExternalLinkIcon />
                 </Link>
               </LinkBox>
-              
+
             </Box>
             <Text as="span" fontWeight={"bold"}>
               2023
@@ -136,7 +109,7 @@ export default function Home() {
                   href="https://next-chess-app.vercel.app/"
                   isExternal
                 >
-                  Updated Chess App <ExternalLinkIcon />
+                  Chess App <ExternalLinkIcon />
                 </Link>
               </LinkBox>
               <LinkBox>
@@ -148,14 +121,14 @@ export default function Home() {
                   ZotNFound <ExternalLinkIcon />
                 </Link>
               </LinkBox>
-              </Box>
+            </Box>
 
             <Text as="span" fontWeight={"bold"}>
               2024
             </Text>
             <Box style={{ textIndent: "1rem" }} mb="1rem">
               <Text>
-                Learned Docker, ML techniques, embedded systems
+                Learned Docker, embedded systems
               </Text>
               <Text>
                 Wrote C++ on the avionics team @{" "}
@@ -167,8 +140,57 @@ export default function Home() {
                   UCI CubeSat<ExternalLinkIcon />
                 </Link>
               </Text>
+
+              <LinkBox>
+                <Link
+                  color={"teal"}
+                  href="https://github.com/ElianMalessy/spacetime-crawler4py"
+                  isExternal
+                >
+                  Multi-threaded web crawler, index, search engine <ExternalLinkIcon />
+                </Link>
+              </LinkBox>
+
+            </Box>
+
+
+            <Text as="span" fontWeight={"bold"}>
+              2025
+            </Text>
+            <Box style={{ textIndent: "1rem" }} mb="1rem">
+              <Text>
+                Interned at Microsoft on the {" "}
+                <Link
+                  color={"teal"}
+                  href="https://projects.eng.uci.edu/projects/2022-2023/uci-cubesat"
+                  isExternal
+                >
+                  Surface<ExternalLinkIcon />
+                </Link>
+                {" "} camera software team
+              </Text>
+              <LinkBox>
+                <Link
+                  color={"teal"}
+                  href="https://github.com/ElianMalessy/Art-Active-Learning"
+                  isExternal
+                >
+                  Image generation of faces <ExternalLinkIcon />
+                </Link>
+              </LinkBox>
+              <LinkBox>
+                <Link
+                  color={"teal"}
+                  href="https://github.com/ElianMalessy/Art-Active-Learning"
+                  isExternal
+                >
+                  Active learning on user art preferences <ExternalLinkIcon />
+                </Link>
+              </LinkBox>
             </Box>
           </Section>
+
+
           <Box align="center" my={4}>
             <NextLink href="/projects" passHref scroll={false}>
               <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
