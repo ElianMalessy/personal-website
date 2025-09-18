@@ -147,10 +147,19 @@ export default function Home() {
                   href="https://github.com/ElianMalessy/spacetime-crawler4py"
                   isExternal
                 >
-                  Multi-threaded web crawler, index, search engine <ExternalLinkIcon />
+                  Multi-threaded web crawler<ExternalLinkIcon />
                 </Link>
               </LinkBox>
 
+              <LinkBox>
+                <Link
+                  color={"teal"}
+                  href="https://github.com/ElianMalessy/inverted-index"
+                  isExternal
+                >
+                  Inverted-Index, Search Engine<ExternalLinkIcon />
+                </Link>
+              </LinkBox>
             </Box>
 
 
