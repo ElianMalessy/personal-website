@@ -5,12 +5,12 @@ import Section from "../components/layout/section";
 
 export default function Resume() {
   return (
-    <Page title="CV">
+    <Page title="Resume">
       <Container>
         <Section>
-          <Heading as="h1" variant="section-title">CV</Heading>
+          <Heading as="h1" variant="section-title">Resume</Heading>
           <Text mb={5}>The latest version is stored directly with this site.</Text>
-          <Button as="a" href="/resume.pdf" target="_blank" rel="noopener noreferrer" rightIcon={<ExternalLinkIcon />} colorScheme="teal">Open CV</Button>
+          <Button as="a" href="/resume.pdf" target="_blank" rel="noopener noreferrer" rightIcon={<ExternalLinkIcon />} colorScheme="teal">Open Resume</Button>
         </Section>
       </Container>
     </Page>

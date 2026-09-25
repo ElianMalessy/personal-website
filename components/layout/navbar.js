@@ -124,7 +124,7 @@ const Navbar = () => {
           </LinkItem>
           <LinkItem
             target="_blank"
-            href="https://github.com/elian-malessy"
+            href="https://github.com/ElianMalessy"
             display="inline-flex"
             alignItems="center"
             style={{ gap: 4 }}
@@ -184,7 +184,7 @@ const Navbar = () => {
                 >
                   <MenuItem as={Link}>Linkedin</MenuItem>
                 </NextLink>
-                <NextLink href="https://github.com/elian-malessy" passHref>
+                <NextLink href="https://github.com/ElianMalessy" passHref>
                   <MenuItem as={Link}>Github</MenuItem>
                 </NextLink>
                 <NextLink

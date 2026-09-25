@@ -104,7 +104,7 @@ export default function Home() {
               leftIcon={<DownloadIcon />}
               variant="outline"
             >
-              CV
+              Resume
             </Button>
           </HStack>
         </Section>
@@ -121,7 +121,7 @@ export default function Home() {
             <Link color="teal.400" href="mailto:elian.malessy@gmail.com">
               Email <ExternalLinkIcon mx="2px" />
             </Link>
-            <Link color="teal.400" href="https://github.com/elian-malessy" isExternal>
+            <Link color="teal.400" href="https://github.com/ElianMalessy" isExternal>
               GitHub <ExternalLinkIcon mx="2px" />
             </Link>
           </HStack>

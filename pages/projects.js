@@ -104,12 +104,12 @@ export default function Projects() {
         <Section delay={0.2}>
           <Text color={quiet}>
             More implementation details and experiments are available on{" "}
-            <Link color="teal.400" href="https://github.com/elian-malessy" isExternal>
+            <Link color="teal.400" href="https://github.com/ElianMalessy" isExternal>
               GitHub <ExternalLinkIcon mx="2px" />
             </Link>
             , with a complete experience history in my{" "}
             <Link color="teal.400" href="/resume.pdf" isExternal>
-              CV <ExternalLinkIcon mx="2px" />
+              Resume <ExternalLinkIcon mx="2px" />
             </Link>.
           </Text>
         </Section>
