@@ -54,8 +54,7 @@ export default function Home() {
           </Heading>
           <Text color={quiet}>
             I&apos;m pursuing an MSc in Artificial Intelligence at the University of Amsterdam after
-            completing my BSc in Computer Science at UC Irvine. My work sits between machine
-            learning research and the systems needed to evaluate it well.
+            completing my B.S. in Computer Science at UC Irvine.
           </Text>
           <Text mt={3} color={quiet}>
             I&apos;m particularly interested in probabilistic machine learning and generalization.

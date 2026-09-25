@@ -120,8 +120,8 @@ export default function DotGlobe() {
       function update() {
         requestAnimationFrame(update);
         group.rotation.set(
-          group.rotation.x + season / 2500000,
-          group.rotation.y + 0.002,
+          group.rotation.x + season / 1250000,
+          group.rotation.y + 0.004,
           group.rotation.z
         );
         renderer.render(scene, camera);
