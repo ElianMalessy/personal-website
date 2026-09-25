@@ -120,11 +120,11 @@ const Navbar = () => {
             path={path}
           >
             <IoBulbOutline />
-            Projects
+            Work
           </LinkItem>
           <LinkItem
             target="_blank"
-            href="https://github.com/ElianMalessy"
+            href="https://github.com/elian-malessy"
             display="inline-flex"
             alignItems="center"
             style={{ gap: 4 }}
@@ -147,7 +147,7 @@ const Navbar = () => {
             LinkedIn
           </LinkItem>
           <LinkItem
-            href="/Elian_Hijmans_Malessy_resume.pdf"
+            href="/resume.pdf"
             display="inline-flex"
             alignItems="center"
             style={{ gap: 4, marginRight: "1rem" }}
@@ -176,7 +176,7 @@ const Navbar = () => {
                   <MenuItem as={Link}>About</MenuItem>
                 </NextLink>
                 <NextLink href="/projects" passHref>
-                  <MenuItem as={Link}>Projects</MenuItem>
+                  <MenuItem as={Link}>Work</MenuItem>
                 </NextLink>
                 <NextLink
                   href="https://www.linkedin.com/in/elian-hijmans-malessy-2720211ba/"
@@ -184,11 +184,11 @@ const Navbar = () => {
                 >
                   <MenuItem as={Link}>Linkedin</MenuItem>
                 </NextLink>
-                <NextLink href="https://github.com/ElianMalessy" passHref>
+                <NextLink href="https://github.com/elian-malessy" passHref>
                   <MenuItem as={Link}>Github</MenuItem>
                 </NextLink>
                 <NextLink
-                  href="/Elian_Hijmans_Malessy_resume.pdf"
+                  href="/resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

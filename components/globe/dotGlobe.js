@@ -4,9 +4,11 @@ import { useColorMode } from "@chakra-ui/react";
 export default function DotGlobe() {
   const first1 = useRef(true);
   const first2 = useRef(true);
+  const initialColorMode = useRef();
 
   const [rendererState, setRendererState] = useState();
   const { colorMode } = useColorMode();
+  if (!initialColorMode.current) initialColorMode.current = colorMode;
 
   const group = useMemo(() => new THREE.Object3D(), []);
 
@@ -34,7 +36,7 @@ export default function DotGlobe() {
         );
 
         const material = new THREE.MeshBasicMaterial({
-          color: colorMode === "light" ? 0x1a1a1a : 0xf1f1f1,
+          color: initialColorMode.current === "light" ? 0x1a1a1a : 0xf1f1f1,
         });
         for (let i = DOT_COUNT; i >= 0; i--) {
           const phi = Math.acos(-1 + (2 * i) / DOT_COUNT);
@@ -65,7 +67,6 @@ export default function DotGlobe() {
           mesh.geometry.dispose();
         }
         material.dispose();
-        console.log("ended");
       };
       img.crossOrigin = "Anonymous";
       img.src =
@@ -111,7 +112,6 @@ export default function DotGlobe() {
       let season = 500;
       function changeSeasons() {
         requestAnimationFrame(changeSeasons);
-        console.log(season);
         if (group.rotation.x >= Math.PI / 4 && season >= -500) season--;
         else if (group.rotation.x <= -0.05 && season <= 500) season++;
       }

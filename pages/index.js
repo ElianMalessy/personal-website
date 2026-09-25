@@ -1,214 +1,133 @@
 import Head from "next/head";
 import NextLink from "next/link";
-import styles from "../styles/Home.module.css";
 import {
-  Container,
   Box,
-  useColorModeValue,
   Button,
-  Text,
+  Container,
   Heading,
+  HStack,
   Link,
-  LinkBox,
+  List,
+  ListItem,
+  Text,
+  useColorModeValue,
 } from "@chakra-ui/react";
-import { ChevronRightIcon, ExternalLinkIcon } from "@chakra-ui/icons";
-
-import Section from "../components/layout/section";
+import { ChevronRightIcon, DownloadIcon, ExternalLinkIcon } from "@chakra-ui/icons";
 import Page from "../components/layout/page";
+import Section from "../components/layout/section";
+
+const ResearchItem = ({ title, children }) => (
+  <ListItem mb={5}>
+    <Text fontWeight="bold">{title}</Text>
+    <Text color={useColorModeValue("gray.700", "whiteAlpha.700")}>{children}</Text>
+  </ListItem>
+);
 
 export default function Home() {
+  const quiet = useColorModeValue("gray.700", "whiteAlpha.700");
+
   return (
-    <Page title={"Homepage"}>
+    <Page title="Home">
       <Head>
-        <meta name="description" content="Homepage" />
+        <meta
+          name="description"
+          content="Elian Hijmans Malessy is an MSc Artificial Intelligence student at the University of Amsterdam."
+        />
       </Head>
-      <Section delay={0.3}>
-        <Container>
-          <Section delay={0.3}>
-            <Box
-              borderRadius="lg"
-              mb={6}
-              p={3}
-              textAlign="center"
-              shadow={"lg"}
-              bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}
-            >
-              Hello, my name is Elian Hijmans Malessy!
-            </Box>
-          </Section>
+      <Container>
+        <Section delay={0.2}>
+          <Box
+            borderRadius="lg"
+            mb={7}
+            p={3}
+            textAlign="center"
+            shadow="lg"
+            bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}
+          >
+            Hello, I&apos;m Elian Hijmans Malessy.
+          </Box>
+        </Section>
 
-          <Section delay={0.3}>
-            I am an undergraduate studying computer science at UC Irvine with experience
-            in full-stack development. My passion lies in building interactive
-            products that positively impact communities.
-          </Section>
-          {/* <Section delay={0.3}>
-            Currently I am developing ZotNFound
-          </Section> */}
-          <Section delay={0.3}>
-            <Heading size={"md"} variant="section-title">
-              Timeline
-            </Heading>
-            <Text as="span" fontWeight={"bold"}>
-              2021
-            </Text>
-            <Box style={{ textIndent: "1rem" }} mb="1rem">
-              <Text>Completed CS50</Text>
-              <Text>Learned C, Python, HTML/CSS/JS, ReactJS</Text>
-            </Box>
+        <Section delay={0.25}>
+          <Heading as="h1" size="lg" mb={4}>
+            Machine learning researcher and engineer
+          </Heading>
+          <Text color={quiet}>
+            I&apos;m pursuing an MSc in Artificial Intelligence at the University of Amsterdam after
+            completing my BSc in Computer Science at UC Irvine. My work sits between machine
+            learning research and the systems needed to evaluate it well.
+          </Text>
+          <Text mt={3} color={quiet}>
+            I&apos;m particularly interested in probabilistic machine learning and generalization.
+          </Text>
+        </Section>
 
-            <Text as="span" fontWeight={"bold"}>
-              2022
-            </Text>
-            <Box style={{ textIndent: "1rem" }} mb="1rem">
-              <Text> Learned NextJS, Svelte, React Native, R</Text>
-              <Text>
-                Used R as a Bioinformatics research assistant @{" "}
-                <Link
-                  color={"teal"}
-                  href="https://melotto.ucdavis.edu/"
-                  isExternal
-                >
-                  Melotto Lab <ExternalLinkIcon />
-                </Link>
-              </Text>
-              <LinkBox>
-                <Link
-                  color={"teal"}
-                  href="https://github.com/ElianMalessy/FoodFactsApp"
-                  isExternal
-                >
-                  FoodFactsApp <ExternalLinkIcon />
-                </Link>
-              </LinkBox>
+        <Section delay={0.3}>
+          <Heading as="h2" variant="section-title">
+            Research
+          </Heading>
+          <List>
+            <ResearchItem title="Stochastic optimization for reinforcement learning">
+              At UC Irvine&apos;s Intelligent Dynamics Lab, I built PyTorch tools for gradient
+              estimation and studied continuous relaxations for discrete world models.
+            </ResearchItem>
+            <ResearchItem title="Generalization and model merging">
+              With UC Irvine&apos;s Machine Learning Research Group, I investigated double descent,
+              minima flatness, and parameter-efficient ways to merge pruned neural networks.
+            </ResearchItem>
+            <ResearchItem title="Machine learning for physical systems">
+              At Calit2, I developed neural-network surrogates for finite-element thermal
+              simulations and real-time computer vision pipelines.
+            </ResearchItem>
+          </List>
+        </Section>
 
-            </Box>
-            <Text as="span" fontWeight={"bold"}>
-              2023
-            </Text>
-            <Box style={{ textIndent: "1rem" }} mb="1rem">
-              <Text>
-                Enrolled in UC Irvine with a degree in computer science
-              </Text>
-              <Text>
-                Learned Flask, C++, MIPS assembly
-              </Text>
-              <Text>
-                Used Flask for API&apos;s in the lab of Professor G.P. Li @{" "}
-                <Link
-                  color={"teal"}
-                  href="https://github.com/ElianMalessy/FoodFactsApp"
-                  isExternal
-                >
-                  Calit2 <ExternalLinkIcon />
-                </Link>
-              </Text>
-              <LinkBox>
-                <Link
-                  color={"teal"}
-                  href="https://next-chess-app.vercel.app/"
-                  isExternal
-                >
-                  Chess App <ExternalLinkIcon />
-                </Link>
-              </LinkBox>
-              <LinkBox>
-                <Link
-                  color={"teal"}
-                  href="https://zotnfound.com/"
-                  isExternal
-                >
-                  ZotNFound <ExternalLinkIcon />
-                </Link>
-              </LinkBox>
-            </Box>
-
-            <Text as="span" fontWeight={"bold"}>
-              2024
-            </Text>
-            <Box style={{ textIndent: "1rem" }} mb="1rem">
-              <Text>
-                Learned Docker, embedded systems
-              </Text>
-              <Text>
-                Wrote C++ on the avionics team @{" "}
-                <Link
-                  color={"teal"}
-                  href="https://projects.eng.uci.edu/projects/2022-2023/uci-cubesat"
-                  isExternal
-                >
-                  UCI CubeSat<ExternalLinkIcon />
-                </Link>
-              </Text>
-
-              <LinkBox>
-                <Link
-                  color={"teal"}
-                  href="https://github.com/ElianMalessy/spacetime-crawler4py"
-                  isExternal
-                >
-                  Multi-threaded web crawler<ExternalLinkIcon />
-                </Link>
-              </LinkBox>
-
-              <LinkBox>
-                <Link
-                  color={"teal"}
-                  href="https://github.com/ElianMalessy/inverted-index"
-                  isExternal
-                >
-                  Inverted-Index, Search Engine<ExternalLinkIcon />
-                </Link>
-              </LinkBox>
-            </Box>
-
-
-            <Text as="span" fontWeight={"bold"}>
-              2025
-            </Text>
-            <Box style={{ textIndent: "1rem" }} mb="1rem">
-              <Text>
-                Interned at Microsoft on the {" "}
-                <Link
-                  color={"teal"}
-                  href="https://projects.eng.uci.edu/projects/2022-2023/uci-cubesat"
-                  isExternal
-                >
-                  Surface<ExternalLinkIcon />
-                </Link>
-                {" "} camera software team
-              </Text>
-              <LinkBox>
-                <Link
-                  color={"teal"}
-                  href="https://github.com/ElianMalessy/Art-Active-Learning"
-                  isExternal
-                >
-                  Image generation of faces <ExternalLinkIcon />
-                </Link>
-              </LinkBox>
-              <LinkBox>
-                <Link
-                  color={"teal"}
-                  href="https://github.com/ElianMalessy/Art-Active-Learning"
-                  isExternal
-                >
-                  Active learning on user art preferences <ExternalLinkIcon />
-                </Link>
-              </LinkBox>
-            </Box>
-          </Section>
-
-
-          <Box align="center" my={4}>
+        <Section delay={0.35}>
+          <Heading as="h2" variant="section-title">
+            Recent work
+          </Heading>
+          <Text color={quiet}>
+            Recent projects include a graph variational autoencoder for molecular generation and
+            semi-supervised Python–C++ translation with CodeT5. I have also worked on production
+            systems at Uber and Microsoft.
+          </Text>
+          <HStack mt={6} spacing={3} flexWrap="wrap">
             <NextLink href="/projects" passHref scroll={false}>
               <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-                My portfolio
+                Research & projects
               </Button>
             </NextLink>
-          </Box>
-        </Container>
-      </Section>
+            <Button
+              as="a"
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              leftIcon={<DownloadIcon />}
+              variant="outline"
+            >
+              CV
+            </Button>
+          </HStack>
+        </Section>
+
+        <Section delay={0.4}>
+          <Heading as="h2" variant="section-title">
+            Contact
+          </Heading>
+          <Text color={quiet}>
+            I&apos;m based in Amsterdam and open to research collaborations and machine learning
+            research roles.
+          </Text>
+          <HStack mt={3} spacing={5}>
+            <Link color="teal.400" href="mailto:elian.malessy@gmail.com">
+              Email <ExternalLinkIcon mx="2px" />
+            </Link>
+            <Link color="teal.400" href="https://github.com/elian-malessy" isExternal>
+              GitHub <ExternalLinkIcon mx="2px" />
+            </Link>
+          </HStack>
+        </Section>
+      </Container>
     </Page>
   );
 }
